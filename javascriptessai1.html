@@ -120,7 +120,7 @@
 <body>
     
 
-
+<div>fr</div>
 <div id="vide">|</div>
 <div id="superconteneur">
     <div id="conteneur">
@@ -177,17 +177,16 @@
             console.log(input);
             document.getElementById("vide").innerHTML = input;
         }
-        //Fait le calcul et envoie dans quickmath
+      
         function quickMath() {
             console.log(eval(input));
             document.getElementById("vide").innerHTML = eval(input);
         }
-        //Reset
+
         function Reset(btn) {
             document.getElementById("vide").innerHTML = "0";
             input = "";
         }
-        //rem
         function rem1(btn) {
             input = input.replace(input.slice(-1), "");
             console.log(input);
