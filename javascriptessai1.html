@@ -1,0 +1,203 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculette.css">
+<script src="./js/calc.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="petitcontainer">
+            <div class="affichage"> 
+                <div id="calculette"></div>
+            </div>
+
+            <div class="chiffre">
+                <div class="partiepre"  >
+                    <div><input type="button" class="btn"value="-" onclick="moins()" ></div>
+                    <div ><input type="button"class="btn" value="+" onclick="plus()"></div>
+                    <div ><input type="button" class="btn"value="*" onclick="fois()"></div>
+                    <div><input type="button" class="btn"value="=" onclick="egal()"></div>            
+                    <div ><input type="button"class="btn" value="C" onclick="c()"></div><br><br>
+                </div>  
+
+                <div class="deuxieme">
+                    <div ><input type="button"class="btn" value="1" onclick="()"></div>                
+                    <div ><input type="button" class="btn"value="2" onclick="deux()"></div>
+                    <div><input class="btn" type="button" value="3" onclick="trois()"></div>
+                    <div><input type="button"class="btn"id="quatre" value="4" onclick="quatre()"></div>
+                </div>
+
+                <div class="troisieme">
+                <div><input type="button"class="btn" value="5" onclick="cinq()"></div>
+                <div><input type="button"class="btn" value="6"onclick="six()"></div>
+                <div><input type="button"class="btn" value="7"onclick="sept()"></div>
+                <div><input type="button"class="btn" value="8"onclick="huit()"></div>
+                <div><input type="button"class="btn" value="9"onclick="neuf()"></div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+    
+    <script>
+    
+     
+            function egal() {
+                document.getElementById("calculette").innerHTML = "=";
+            }
+            function moins() {
+                    document.getElementById("calculette").innerHTML = "-";
+                }
+            function plus() {
+                    document.getElementById("calculette").innerHTML = "+";
+                            }
+            function fois() {
+                    document.getElementById("calculette").innerHTML = "*";
+                }
+            function C() {
+                        document.getElementById("calculette").innerHTML = " ";
+                    }
+
+
+                    if(document.getElementById(quatre).innerHTML){
+                         alert('quatre fdd'); 
+                    }
+                 
+
+                 -->
+
+    <!-- // function AC() {
+    //             document.getElementById("calculette").innerHTML += slice;
+    //         }
+    
+    // function un(){
+    //             document.getElementById("calculette").innerHTML += 1;
+    //         }
+    // function deux() {
+    //     document.getElementById("calculette").innerHTML -= 2;
+    // }
+    //  function trois() {
+    //         document.getElementById("calculette").innerHTML += 3; 
+    //     }
+    // function quatre() {
+    //     document.getElementById("calculette").innerHTML += 4; 
+    // }
+    // function cinq() {
+    //     document.getElementById("calculette").innerHTML += 5;
+    // }
+    // function six() {
+    //     document.getElementById("calculette").innerHTML += 6;
+    // }
+    // function sept() {
+    //         document.getElementById("calculette").innerHTML += 7;
+    //     }
+    // function huit() {
+    //          document.getElementById("calculette").innerHTML += 8;
+    //         }
+    // function neuf() {
+    //          document.getElementById("calculette").innerHTML += 9;
+    //             }
+    
+  -->
+<!-- 
+    </script>
+
+</body>
+</html>  -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="calculette.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<div id="vide">|</div>
+<div id="superconteneur">
+    <div id="conteneur">
+
+        <div><input type="button" value='AC' onclick='Reset(this)' /></div>
+
+        <div><input type="button" value='CE' onclick='rem1(this)' /></div>
+
+        <div><input type="button" value='%' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='/' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='7' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='8' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='9' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='*' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='4' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='5' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='6' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='-' onclick='ShowValue(this)' /></div>
+
+        <div>
+            <input type="button" value='1' onclick='ShowValue(this)' />
+        </div>
+
+        <div><input type="button" value='2' onclick='ShowValue(this)' /></div>
+
+        <div> <input type="button" value='3' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='+' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='0' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='.' onclick='ShowValue(this)' /></div>
+
+        <div><input type="button" value='=' onclick='quickMath(this)' /></div>
+
+    </div>
+</div>
+
+<script>
+    let input = "";
+        function ShowValue(btn) {
+            input += btn.value;
+
+
+            console.log(input);
+            document.getElementById("vide").innerHTML = input;
+        }
+        //Fait le calcul et envoie dans quickmath
+        function quickMath() {
+            console.log(eval(input));
+            document.getElementById("vide").innerHTML = eval(input);
+        }
+        //Reset
+        function Reset(btn) {
+            document.getElementById("vide").innerHTML = "0";
+            input = "";
+        }
+        //rem
+        function rem1(btn) {
+            input = input.replace(input.slice(-1), "");
+            console.log(input);
+            document.getElementById("vide").innerHTML = input;
+        }
+
+</script>
+
+</body>
+
+
+
+</html>
